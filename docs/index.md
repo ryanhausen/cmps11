@@ -9,7 +9,7 @@ layout: default
 
 <ul class="post-list">
     <li>
-        <a class="post-link" href="{{ site.url }}/assets/topics/slide.html">Polymorphism</a>
+        <a class="post-link" href="{{ site.baseurl }}/assets/topics/slide.html">Polymorphism</a>
     </li>
 </ul>
 
