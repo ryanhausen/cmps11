@@ -6,6 +6,8 @@ Animal a = new Animal("Generic Animal");
 print(a.speak());
 print(a.toString());
 
+
+
 // Upcasting
 Animal a = new Animal("Generic Animal");
 Animal c = new Cat();
@@ -14,6 +16,8 @@ Animal d = new Dog();
 print(a.speak());
 print(c.speak());
 print(d.speak());
+
+
 
 // Upcasting Animal is not Dog
 Animal a = new Animal("Generic Animal");
@@ -24,9 +28,20 @@ print(a.speak());
 print(c.speak());
 print(d.dig());
 
+
+
 // Upcasting everything is an object
 Cat c = new Cat();
 Animal a = c;
 Object o = a;
 
 print(o.toString());
+
+
+
+// Failed downcasting example Cat != Dog
+Animal a = new Cat();
+
+print(a.speak());
+
+((Dog)a).dig();
