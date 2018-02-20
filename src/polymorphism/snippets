@@ -45,3 +45,47 @@ Animal a = new Cat();
 print(a.speak());
 
 ((Dog)a).dig();
+
+
+// Playing with Polymorphism
+
+add Animal.bite() and Cat.bite()
+
+Animal a = new Animal("Animal");
+Cat c = new Cat();
+Animal b = new Cat();
+
+print(a.bite());
+print(c.bite());
+print(b.bite());
+
+static doesn't depend on the instance, its class level
+
+Animal.bite();
+Cat.bite();
+Animal();
+
+add final String dig() to Animal 
+
+Animal a = new Animal("Animal");
+Dog d = new Dog();
+Animal b = new Dog();
+
+print(a.dig());
+print(d.dig());
+print(b.dig());
+
+we cant't override a final method so it fails
+
+
+
+
+
+
+
+
+
+
+
+
+
