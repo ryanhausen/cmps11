@@ -1,0 +1,87 @@
+// OOP - Using an intance of a class ===========================================
+
+Cat mrWhiskers = new Cat("Mr.Whiskers", "Gray");
+Cat fuzzles = new Cat("Fuzzles", "Black");
+
+print(mrWhiskers.getName());
+
+
+// INHERITANCE - Tiger is a Cat ================================================
+Tiger t = new Tiger();
+
+print(t.getName());
+t.meow();
+
+
+// Access modifiers ============================================================
+
+// add private method void Cat.useLitterBox()
+private void useLitterBox(){
+    System.out.println("Leave me alone.");
+}
+
+// try to access via tiger
+
+Tiger t = new Tiger();
+t.useLitterBox();
+
+// change method to protected
+
+protected void useLitterBox(){
+    System.out.println("Leave me alone.");
+}
+
+// try again
+
+Tiger t = new Tiger();
+t.useLitterBox();
+
+
+// Static methods/fields =======================================================
+
+// add static field int Cat.numLegs
+public static int numLegs = 4;
+
+// add static method boolean equals(Cat cat1, Cat cat2)
+
+public static boolean equals(Cat cat1, Cat cat2){
+    return cat1.name.equals(cat2.name) && cat1.color.equals(cat2.color);
+}
+
+// use the methods/fields
+
+print("a cat has " + Cat.NUM_LEGS + " legs");
+
+Cat cat1 = new Cat("kitty", "blue");
+Cat cat2 = new Cat("kitty", "blue");
+
+print(Cat.equals(cat1, cat2));
+
+
+// Initialization Blocks =======================================================
+
+// add static and instance initializations Blocks to Cat
+
+static {
+    System.out.println("Static Initialization Block!");
+}
+
+{
+    System.out.println("Instance Initialization Block");
+}
+
+// initialize the class twice to see it at work.
+Cat cat1 = new Cat("Cat", "Blue");
+Cat cat2 = new Cat("Cat", "Green");
+
+
+// final =======================================================================
+
+// make Cat final and try to run
+
+// make meow final
+
+// make a final variable and try to change it
+
+final int one = 1;
+one = 2;

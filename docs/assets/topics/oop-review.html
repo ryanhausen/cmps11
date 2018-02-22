@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>OOP Review</title>
 
-<!-- Optional: on every page: header and footer 
+<!-- Optional: on every page: header and footer
 <header>
   Hi, I'm a header
 </header>
@@ -16,7 +16,10 @@
 
 <section>
     <!-- This is the first slide -->
-    <h1>Review of Object Oriented Programming</h1>
+    <h1>Object Oriented Programming</h1>
+    <h2><a href="http://v.ht/OOP-REVIEW">http://v.ht/OOP-REVIEW</a></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Google_Chrome_logo_and_wordmark_%28Carlitoscarlos%29.svg/2000px-Google_Chrome_logo_and_wordmark_%28Carlitoscarlos%29.svg.png"
+    style="display:block; width:25%; margin:auto;"></img>
 </section>
 
 <section>
@@ -36,22 +39,23 @@
 </section>
 
 <section>
-    <iframe src="https://repl.it/@RyanHausen/SuperGreatMiniMonopoly?lite=true" 
+    <iframe src="https://repl.it/@RyanHausen/SuperGreatMiniMonopoly?lite=true"
             style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
     </iframe>
 </section>
 
 <section>
-    <h2>Instructions</h2>
+    <h3>Instructions</h3>
     <ul>
         <li>Pick one class</li>
         <li>Implement It</li>
         <li>Share it with me</li>
+        <li>We'll review implementations anonymously</li>
     </ul>
 </section>
 
 <section>
-    <h2>Basic Rules of Super Great Minimonopoly</h2>
+    <h3>Basic Rules of Super Great Minimonopoly</h3>
     <ul>
         <li>2-4 Players</li>
         <li>You lose if you have less than $10</li>
@@ -60,7 +64,10 @@
         <li>Free parking is just that, free parking</li>
         <li>You have to pay $10 to get out of jail, you can't wait</li>
         <li>Goto jail, sends you to jail</li>
-        <li>Consider all cards of the same color identical</li>
+        <li>
+          Consider all cards of the same color identical with regard to
+          rent, price, etc.
+        </li>
     </ul>
 </section>
 
@@ -70,12 +77,12 @@
 </section>
 
 <section>
-    <h2>Object Oriented Programming</h2>
+    <h3>Object Oriented Programming</h3>
     <ul>
         <li>Allows us to model a problem using objects</li>
         <li>Objects contain both data and function</li>
         <li>
-            Objects of <span style="color:red;">same</span> class have the 
+            Objects of <span style="color:red;">same</span> class have the
             <span style="color:red;">same</span> data and functions
         </li>
         <ul>
@@ -86,13 +93,12 @@
 </section>
 
 <section>
-        <h2>Class</h2>
+        <h3>Class</h3>
         <ul>
             <li>Contains the definition for a family of objects</li>
             <li>Like a blueprint that all objects of that type follow</li>
         </ul>
-        <pre>
-        <code class="prettyprint">
+        <pre><code class="prettyprint">
     public class Cat{
         String name;
         String color;
@@ -105,51 +111,49 @@
         public void meow(){
             System.out.println("MEOW!");
         }
-    } 
-        </code>
-        </pre>
+    }
+        </code></pre>
 </section>
 
 <section>
-        <h2>Using a Class</h2>
+        <h3>Using a Class</h3>
         <ul>
             <li>
-                Make new objects using <span style="color:blue">new</span> 
+                Make new objects using <span style="color:blue">new</span>
                 keyword
             </li>
             <li>
                 Interact with a particular instance by using its variable.
             </li>
         </ul>
-        <pre>
-        <code class="prettyprint">
-    public class TestCat{
-        public static void main(String[] args){
-            Cat mrWhiskers = new Cat();
-            Cat fuzzles = new Cat();
+        <pre><code class="prettyprint">
+  public class TestCat{
+      public static void main(String[] args){
+          Cat mrWhiskers = new Cat("Mr.Whiskers",
+                                  "Gray");
+          Cat fuzzles = new Cat("Fuzzles", "Black");
 
-            System.out.println(mrWhiskers.meow());
-        }
-    } 
-        </code>
-        </pre>
+          mrWhiskers.meow();
+      }
+  }
+        </code></pre>
 </section>
 
 <section>
-    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true" 
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
             style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
     </iframe>
 </section>
 
 <section>
-        <h2>Inheritance</h2>
+        <h3>Inheritance</h3>
         <ul>
             <li>
                 Define a heirarchy of functionality
             </li>
             <li>
-                A <span style="color:red">sub</span>class 
-                <span style="color:rebeccapurple">extends</span> a 
+                A <span style="color:red">sub</span>class
+                <span style="color:rebeccapurple">extends</span> a
                 <span style="color:blue">super</span>class
             </li>
             <li>A subclass may:</li>
@@ -164,37 +168,153 @@
 
 <!-- go over implicit super constructor calls here -->
 <section>
-    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true" 
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
             style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
     </iframe>
 </section>
 
 <section>
-    <h2>Access modifiers wrt inheritance</h2>
+    <h3>How Access Modifiers Affect Inheritance</h3>
+    <ul>
+      <li><code style="color:blue">public</code> accessible to subclass and everyone else</li>
+      <li><code style="color:blue">private</code> not accessible to subclass or anyone else</li>
+      <li>
+        <code style="color:blue">protected</code> accessible to subclass
+        and other classes in the package
+      </li>
+    </ul>
 </section>
 
 <section>
-    <h2>Field/Variable Hiding</h2>
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
+            style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
+    </iframe>
 </section>
 
 <section>
-    <h2>Static Fields/Methods</h2>
-</section>
-    
-<section>
-    <h2>Static/NonStatic Initialization Blocks</h2>
-</section>
-
-<section>
-    <h2>Order of Initialization</h2>
+  <figure>
+    <img src="http://codepumpkin.com/wp-content/uploads/2017/09/accessModifier.png"
+         alt="do a google search for access modifers java">
+  </figure>
 </section>
 
 <section>
-    <h2>Final Classes/Methods/Fields</h2>
+  <h3><code style="color:blue">this</code> vs <code style="color:blue">super</code></h3>
+  <ul>
+    <li><code style="color:blue">this</code></li>
+    <ul>
+      <li>Refers to the current instance of the class that we're working with</li>
+    </ul>
+    <li><code style="color:blue">super</code></li>
+    <ul>
+        <li>Refers to the immediate superclass to the current class</li>
+    </ul>
+  </ul>
 </section>
 
 <section>
-    <h2>Abstract Classes/Methods</h2>
+    <h3>Static</h3>
+    <ul>
+      <li>Work at the class level, not instance</li>
+      <li>
+        Fields that describe the class regardless of
+        any particular instance that you are working with.
+      </li>
+      <li>
+        Methods that perform a function or action separate from any particular
+        instance.
+      </li>
+    </ul>
+</section>
+
+<section>
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
+            style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
+    </iframe>
+</section>
+
+<section>
+    <h3>Initialization Blocks</h3>
+    <ul>
+      <li>Initialization blocks - per instance</li>
+      <pre><code class="prettyprint">
+public class SimpleClass{
+  {
+    System.out.println("Instance!");
+  }
+}
+        </code></pre>
+
+      <li>Static Initialization - once per class</li>
+      <pre><code class="prettyprint">
+public class SimpleClass{
+  static {
+    System.out.println("Static!");
+  }
+}
+          </code></pre>
+    </ul>
+</section>
+
+<section>
+    <h3>Order of Initialization</h3>
+    <ul>
+      <li>Once per class</li>
+      <ul>
+        <li>Static variable declaration</li>
+        <li>Static block</li>
+      </ul>
+      <li>Once per instance</li>
+      <ul>
+        <li>Variable declaration</li>
+        <li>Initialization block</li>
+        <li>Constructor</li>
+      </ul>
+    </ul>
+</section>
+
+<section>
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
+            style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
+    </iframe>
+</section>
+
+<section>
+    <h3>Final</h3>
+    <ul>
+      <li>Final classes cannot be extended. No subclasses</li>
+      <code class="prettyprint"> final class CantBeExtended {} </code>
+      <li>Final methods cannot be overridden</li>
+      <code class="prettyprint"> final void NoOverride() {} </code>
+      <li>Final variables cannot have their values changed</li>
+      <code class="prettyprint"> final int one = 1;</code>
+    </ul>
+</section>
+
+<section>
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
+            style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
+    </iframe>
+</section>
+
+<section>
+    <h3>Abstract</h3>
+  <ul>
+    <li>Allows us to design the behaviors of a class without implementing it</li>
+    <li>
+      Any class that extends a class that is abstract must either:
+    </li>
+    <ul>
+      <li>Implement all of the  abstract methods from the abstract class</li>
+      <li>Also be declared abstract</li>
+    </ul>
+  </ul>
+</section>
+
+<section>
+    <iframe src="https://repl.it/@RyanHausen/OOPWithCats?lite=true"
+            style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
+    </iframe>
 </section>
 
 <section>
@@ -206,7 +326,7 @@
 </section>
 
 <section>
-    <iframe src="https://repl.it/@RyanHausen/SuperGreatMiniMonopoly?lite=true" 
+    <iframe src="https://repl.it/@RyanHausen/SuperGreatMiniMonopoly?lite=true"
             style="height: 600px; min-height: 420px; max-height: 90vh; width: 100%; overflow: hidden;">
     </iframe>
 </section>
@@ -798,7 +918,7 @@
       requestFullscreen.apply(html);
     }
   }
-  
+
   Dz.setProgress = function(aIdx, aStep) {
     var slide = $("section:nth-of-type("+ aIdx +")");
     if (!slide)
@@ -808,14 +928,14 @@
         stepSize = slideSize / steps;
     this.progressBar.style.width = ((aIdx - 1) * slideSize + aStep * stepSize) + '%';
   }
-  
+
   Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
     aMsg = [aMsg];
     for (var i = 2; i < arguments.length; i++)
       aMsg.push(encodeURIComponent(arguments[i]));
     aWin.postMessage(aMsg.join(" "), "*");
   }
-  
+
   function init() {
     Dz.init();
     window.onkeydown = Dz.onkeydown.bind(Dz);
@@ -831,7 +951,7 @@
     Function.prototype.bind = function (oThis) {
 
       // closest thing possible to the ECMAScript 5 internal IsCallable
-      // function 
+      // function
       if (typeof this !== "function")
       throw new TypeError(
         "Function.prototype.bind - what is trying to be fBound is not callable"
